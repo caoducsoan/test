@@ -1,0 +1,427 @@
+/* css cho hover */
+	a:hover{
+		text-decoration: none!important;
+		color: #fff!important;
+	}
+/* kết thúc css cho hover */
+*{
+	font-family: Roboto;
+}
+.banner-homenew{
+	height: 40px;
+	background: #D9D9D9;
+	line-height: 35px;
+	color: #003471;
+}
+i.fas.fa-bars{
+	   color: #fff;
+    font-size: 40px;
+    line-height: 55px;
+}
+.banner-homenew i{
+	padding-right: 15px;
+}
+  .home .owl-stage .owl-item.active{
+    padding-top: 0!important;
+  }
+
+  #lionel{
+    display: none;
+  }
+  .item img{
+    height: 650px;
+  }
+.menu-headers{
+	background: #003471;
+	min-height: 100px;
+}
+.menu-headers img{
+	width: 264px;
+	height: 48px;
+  transform: translateY(30%);
+}
+div#navbarNav{
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 23px;
+		transform: translateY(15px);
+}
+#navbarNav a{
+	color: #fff;
+	margin-left: 80px;
+}
+nav.navbar.navbar-expand-lg{
+	padding-left: 0;
+	padding-right: 0;
+}
+.item{
+	position: relative;
+}
+.content-home-banner {
+    position: absolute;
+    top: 143px;
+    right: 72px;
+    text-align: right;
+    font-weight: bold;
+		font-size: 36px;
+		line-height: 134%;
+		letter-spacing: 0.05em;
+		color: #000000;
+}
+.ulright{
+    justify-content: flex-end;
+}
+.lionelwrap li{
+	   margin-left: 10%;
+}
+.owl-theme .owl-dots .owl-dot.active span{
+	background: #003471!important;
+
+	border-radius: 50%;
+}
+.owl-theme .owl-dots .owl-dot span{
+	border: 1px solid #003471;
+	background: #fff!important;
+		width: 15px;
+	height: 15px;
+}
+.content-home-banner span{
+	  color: #003471;
+   font-size: 45px;
+}
+.btn-vieclam,.btn-gia-su,.btn-khoa-hoc{
+	background: #003471;
+	border-radius: 10px;
+	width: 324px;
+	height: 55px;
+	text-align: center;
+	line-height: 55px;
+	font-size: 20px;
+	color: #fff;
+	margin-left: 16px;
+}
+.btn-gia-su{
+	background: #F70303;
+}
+.btn-group{
+	margin-top: 48px;
+}
+.content-home-banner-2{
+		font-weight: bold;
+    font-size: 36px;
+    position: absolute;
+    top: 35%;
+    width: 852px;
+    right: 15%;
+}
+.btn-more-2,.btn-more-3{
+	width: 324px;
+	background: #003471;
+	border-radius: 10px;
+	text-align: center;
+	color: #fff;
+	height: 55px;
+	font-size: 24px;
+	line-height: 55px;
+}
+.content-home-banner-2 span{
+	font-size: 45px;	
+	color: #003471;
+}
+.content-home-banner-3 span{
+		font-size: 45px;
+		color: #F70303;
+}
+.content-home-banner-3{
+	    position: absolute;
+    top: 30%;
+    font-size: 36px;
+    font-weight: bold;
+    width: 868px;
+    text-align: justify;
+	    left: 16%;
+}
+.owl-theme .owl-nav.disabled+.owl-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.owl-carousel .owl-item img{
+	object-fit: cover;
+}
+.gruoper{
+	justify-content: center;
+    display: flex!important;
+}
+.btn-more-3 {
+	background:#F70303 ;
+}
+.content-home-banner-4{
+	    position: absolute;
+    top: 45%;
+    right: 16%;
+    font-size: 27px;
+    font-weight: bold;
+    width: 865px;
+    text-align: justify;
+}
+.btn-more-4{
+    background: #F97700;
+    border-radius: 10px;
+    width: 324px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    color: #fff;
+}
+.content-home-banner-4 span{
+	font-size: 45px;
+	color: #F97700;
+}
+
+/* --------------------------------------------------- css phần content ------------------------------- */
+.container.bao-boc-content {
+    display: flex;
+}
+.content-vl{
+	height: 610px;
+	margin: 60px 0;
+}
+.content-vl img{
+	width: 656px;
+height: 610px;
+border-radius: 10px;
+}
+.vl-content-trong,.gs-content-trong {
+		text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    margin-left: 30px;
+    margin-top: 17%;
+}
+.title-vl-content,.title-gs-content,.title-kh-content {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #003471;
+}
+.btn-content-vl,.btn-content-gs,.btn-content-kh {
+		background: #003471;
+    border-radius: 10px;
+    width: 459px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.content-gs{
+    background: #F2F2F2;
+    height: 743px;
+    padding: 60px 0;
+}
+.content-gs img{
+	order: 2;
+}
+.gs-content-trong {
+	order: 1;
+	margin-right: 30px;
+}
+.gs-content-trong p{
+	letter-spacing: 0.1em;
+}
+.title-gs-content{
+	color: #F70303;
+}
+.btn-content-gs {
+	background: #F70303;
+}
+.btn-content-kh{
+	background: #F97700;
+}
+.title-kh-content{
+	color: #F97700;
+}
+
+/* --------------------------------------------------- kết thúc css phần content ------------------------------- */
+
+/* --------------------------------------------------css cho màn hình tablet----------------------------------- */
+@media screen and (min-width:568px) and (max-width:992px){
+	ul.navbar-nav{
+		padding-bottom: 40px;
+	}
+	#navbarNav a{
+		margin: 0;
+	}
+	li.nav-item {
+    text-align: center;
+    width: 100%;
+}
+.content-home-banner,.content-home-banner-3,.content-home-banner-2,.content-home-banner-4{
+	font-size: 24px;
+	right: 35px;
+	width: auto;
+	top: 50px;
+}
+.content-home-banner span,.content-home-banner-3 span,.content-home-banner-2 span,.content-home-banner-4 span{
+	font-size: 32px;
+}
+.btn-vieclam, .btn-gia-su, .btn-khoa-hoc{
+	width: 195px;
+	height: 45px;
+	font-size: 14px;
+	line-height: 45px;
+}
+.item img{
+	height: 348px;
+}
+.content-home-banner-2{
+	width: auto;
+	left: 15px;
+	width: auto;
+  left: 18%;
+}
+.content-home-banner-4{
+	left: 20%;
+	top: 30%;
+}
+.content-vl img,.content-gs img{
+	width: 399px;
+	height: 371px;
+}
+.title-vl-content, .title-gs-content, .title-kh-content{
+	font-size: 30px;
+}
+.vl-content-trong, .gs-content-trong {
+	font-size: 14px;
+	margin-left: 20px;
+	margin-top: 12%;
+}
+.btn-content-vl, .btn-content-gs, .btn-content-kh{
+	width: 280px;
+height: 45px;
+}
+.btn-group{
+	margin-top: 12px;
+}
+.content-vl, .content-gs{
+	height: auto;
+	margin: 45px 0;
+}
+.content-gs{
+	padding: 45px 0;
+}
+.item img,.owl-stage-outer{
+	height: 348px;
+}
+}
+
+/* --------------------------------------------------kết thúc css cho màn hình tablet----------------------------------- */
+
+/*-------------------------------------------------------- css cho màn hình mobile------------------------------------- */
+@media screen and (max-width:552px){
+	.box-content-mb,.box-content-mb-gs,.box-content-mb-kh{
+		width: 350px;
+		height: 141px;
+		background: #FFFFFF;
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		margin: 25px 0;
+		padding: 0 12px;
+		background: url(../images/iconmb1.png)no-repeat;
+		background-position: top right ;
+		display: flex;
+	}
+	.box-content-mb-gs{
+		background: url(../images/iconmb2.png)no-repeat;
+		background-position: top right ;
+	}
+	.box-content-mb-kh{
+		background: url(../images/iconmb3.png)no-repeat;
+		background-position: top right ;
+	}
+	.avt-vl-mb,.avt-gs-mb,.avt-kh-mb{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #003471;
+    margin-top: 30px;
+	}
+	.avt-gs-mb{
+		border: 1px solid #F70303;
+	}
+	.content-trong-vl-mb {
+		width: 73%;
+    margin-left: 10px;
+    padding-top: 45px;
+}
+.sapocontent{
+	font-size: 11px;
+line-height: 15px;
+letter-spacing: 0.1em;
+color: #3E3E3E;
+}
+.title-mb-vl,.title-mb-gs,.title-mb-kh {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #003471;
+    margin-bottom: 0;
+}
+.title-mb-gs{
+	color: #F70303;
+}
+i.fas.fa-briefcase,i.fas.fa-graduation-cap,.fas.fa-book{
+	font-size: 40px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    line-height: 75px;
+    color: #003471;
+}
+.fas.fa-book,.title-mb-kh{
+	color: #F97700;
+}
+i.fas.fa-graduation-cap{
+	color: #F70303
+}
+.menu-headers img {
+    width: 131px;
+    height: 24px;
+    margin-left: 75%;
+    transform: translateY(0px);
+}
+.menu-headers {
+    background: #003471;
+    min-height: 44px;
+}
+i.fas.fa-bars {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+}
+.banner-homenew{
+	font-size: 12px;
+}
+.avt-kh-mb{
+	border: 1px solid #F97700;
+}
+.nav-link {
+    font-size: 14px;
+    padding-bottom: 20px;
+    transform: translateY(0);
+}
+#navbarNav a{
+	margin: 0;
+	text-align: center;
+}
+}
+/*------------------------------------------------ kết thúc css cho màn hình mobile----------------------------------- */

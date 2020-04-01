@@ -46,7 +46,7 @@ class site_model extends Model
         $db_qr = $this->db->query($query);
         if($db_qr->num_rows() > 0)
         {
-            $tg1="";
+            $tg1=[];
             foreach($db_qr->result() as $itemcat)
             {
                 $tg1[]=$itemcat;
@@ -134,7 +134,7 @@ class site_model extends Model
         //$this->db->order_by('id','asc');
         //$sql=$this->db->get('tbl_chuyenmuc');
         //echo "<select name='".$name."' class='".$class."' title='".$title."'>\n";	
-        $tg="";
+        $tg=[];
         $sql="select * FROM city where cit_id = 1 or cit_id = 45 ORDER BY `cit_name`";
         $query=$this->db->query($sql);
         foreach($query->result() as $itemcat)
@@ -158,7 +158,7 @@ class site_model extends Model
     {
         $sql="select * FROM city where cit_id='".trim($id)."' ORDER BY `cit_name`";
         $query=$this->db->query($sql);
-        $kq="";
+        $kq=[];
         if($id > 0){
         if($query->num_rows()> 0)
         {
@@ -186,7 +186,7 @@ class site_model extends Model
     {
         $query="select * FROM `user` where use_email ='".strtolower($name)."' and use_pass ='".md5($pass)."' AND `use_authentic`=1";
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             $row=$sql->row();
@@ -199,7 +199,7 @@ class site_model extends Model
     {
         $query="select * FROM `user` as u left JOIN cv as c on u.use_id=c.cv_user_id where u.use_id ='".intval($id)."' AND u.`use_authentic`=1";
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             $row=$sql->row();
@@ -222,7 +222,7 @@ class site_model extends Model
             $query.=" LIMIT 0,".$limit;
         }
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -236,7 +236,7 @@ class site_model extends Model
     {
         $query="select usc_id as use_id,usc_email as use_email,usc_name as use_first_name from user_company where usc_email ='".strtolower($name)."' and usc_pass ='".md5($pass)."' AND `usc_authentic`=1";
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             $row=$sql->row();
@@ -284,7 +284,7 @@ class site_model extends Model
                     
           //var_dump($query);          
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         $arrth="";
         
         if($sql->num_rows()> 0)
@@ -308,7 +308,7 @@ GROUP BY u.usc_id
 order by n.new_hot desc,n.new_do desc,n.new_gap desc,n.new_cao desc,u.usc_id desc
 limit ".$lenght;
         
-        $row="";
+        $row=[];
         
         
         $sql=$this->db->query($query);
@@ -371,7 +371,7 @@ limit ".$lenght;
         $query .=" Where n.new_id='".$id."'";
         //var_dump($query);
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             $row=$sql->row();
@@ -386,7 +386,7 @@ limit ".$lenght;
         $query .=" Where n.id='".$id."'";
         //var_dump($query);
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             $row=$sql->row();
@@ -401,7 +401,7 @@ limit ".$lenght;
         $query .=" Where n.id<>'".$id."' order by id desc limit 10";
                     
                     $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -422,7 +422,7 @@ limit ".$lenght;
                 where u.usc_id='".intval($id)."'";
                 
          $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             $row=$sql->row();
@@ -467,7 +467,7 @@ limit ".$lenght;
                     $query.=" order by n.new_id desc limit 0,6";
                     
                     $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -501,7 +501,7 @@ $query="select c.cit_id,c.cit_name, COUNT(n.new_money)as tongbanghi
                 GROUP BY c.cit_id";
 
         $sql=$this->db->query($query);
-            $row="";
+            $row=[];
             if($sql->num_rows()> 0)
             {
                 foreach($sql->result() as $item){
@@ -553,7 +553,7 @@ $query="select c.cat_id,c.cat_name, COUNT(n.new_money)as tongbanghi
                 where n.new_han_nop > '".$timenow1."'  and FIND_IN_SET(c.cat_id , n.new_cat_id)
                 GROUP BY c.cat_id";
         $sql=$this->db->query($query);
-            $row="";
+            $row=[];
             if($sql->num_rows()> 0)
             {
                 foreach($sql->result() as $item){
@@ -585,7 +585,7 @@ $query="select c.cat_id,c.cat_name, COUNT(n.new_money)as tongbanghi
         $query="select u.use_city,IFNULL(c.cit_name, 'Chưa cập nhật') as tinhthanh ,COUNT(u.use_city) as soungvien from `user` as u left join city as c on u.use_city=c.cit_id
         GROUP BY u.use_city";
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         //var_dump($keywork,$cat,$type); 
         if($sql->num_rows()> 0)
         {
@@ -623,7 +623,7 @@ $query="select c.cat_id,c.cat_name, COUNT(n.new_money)as tongbanghi
         			left join category as c on c.cat_id=c1.cv_cate_id
         GROUP BY c1.cv_cate_id";
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -669,7 +669,7 @@ $query="select c.cat_id,c.cat_name, COUNT(n.new_money)as tongbanghi
                 from `user` as u join cv as c on c.cv_user_id=u.use_id
                 group by c.cv_money_id";
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -693,7 +693,7 @@ $query="select c.cat_id,c.cat_name, COUNT(n.new_money)as tongbanghi
 where c.cv_exp < 6
                 group by c.cv_exp";
                 $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -705,7 +705,7 @@ where c.cv_exp < 6
     function GetFilterABCBycandi($city,$cat,$type)
     {
         $arrabc=GetABC();
-        $row="";
+        $row=[];
         for($i=0;$i<count($arrabc);$i++){
             if($type==1){
                 $link="tim-ung-vien&keywork=".$arrabc[$i]."&dd=".intval($city)."&nn=".intval($cat)."";
@@ -746,7 +746,7 @@ where c.cv_exp < 6
         $total=$this->db->query($query)->num_rows();
         $query.=" limit ".$page.",".$perpage;;
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -760,7 +760,7 @@ where c.cv_exp < 6
     {
         $query="SELECT cit_id,cit_name from city ORDER BY cit_id asc";
         $sql=$this->db->query($query);
-            $row="";
+            $row=[];
         if($sql->num_rows()> 0)
             {
                 foreach($sql->result() as $item){
@@ -788,7 +788,7 @@ where c.cv_exp < 6
         $query="SELECT c.cat_id,c.cat_name,COUNT(n.new_user_id) as socongty from new as n,category as c WHERE n.new_han_nop > '".$timenow1."' and FIND_IN_SET(c.cat_id,n.new_cat_id)
 GROUP BY c.cat_id";
         $sql=$this->db->query($query);
-            $row="";
+            $row=[];
         if($sql->num_rows()> 0)
             {
                 foreach($sql->result() as $item){
@@ -812,7 +812,7 @@ GROUP BY c.cat_id";
     function GetFilterABCByType($city,$cat,$type)
     {
         $arrabc=GetABC();
-        $row="";
+        $row=[];
         for($i=0;$i<count($arrabc);$i++){
             if($type==1){
                 $link="danh-sach-nha-tuyen-dung/keywork=".$arrabc[$i]."&c=".$city."&n=".$cat."&type=2";
@@ -834,7 +834,7 @@ GROUP BY c.cat_id";
                 WHERE n.new_han_nop > '".$timenow1."' and n.new_bang_cap in (e.ValueOption)
                 GROUP BY e.EduID";
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
             {
                 foreach($sql->result() as $item){
@@ -855,7 +855,7 @@ GROUP BY c.cat_id";
                     WHERE n.new_han_nop >'".$timenow1."' and n.new_cap_bac =e.LevelID
                     GROUP BY e.LevelID";
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
             {
                 foreach($sql->result() as $item){
@@ -876,7 +876,7 @@ GROUP BY c.cat_id";
                 WHERE n.new_han_nop > '".$timenow1."' and n.new_exp =e.ValueOption
                 GROUP BY e.ExperienceID";
           $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
             {
                 foreach($sql->result() as $item){
@@ -920,7 +920,7 @@ GROUP BY c.cat_id";
         //var_dump($total);die();
         $query.=" order by sobaiviet desc limit ".$page.",".$perpage;;
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -943,7 +943,7 @@ GROUP BY c.cat_id";
         //var_dump($total);die();
         $query.=" order by id desc limit ".$page.",".$perpage;;
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -1030,7 +1030,7 @@ GROUP BY c.cat_id";
         $total=$this->db->query($query)->num_rows();
         $query.=" limit ".$page.",".$perpage;
         $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -1134,7 +1134,7 @@ SUM(CASE WHEN n.new_han_nop > '".$timenow1."' THEN 1 ELSE 0 END) AS tinconhan
          $query1.=" order by n.new_id desc";
          //var_dump($query1); 
          $sql1=$this->db->query($query1);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -1183,7 +1183,7 @@ SUM(CASE WHEN n.new_han_nop > '".$timenow1."' THEN 1 ELSE 0 END) AS tinconhan
                     $query.=" order by n.new_id desc limit 0,6";
                     //var_dump($query);
                     $sql=$this->db->query($query);
-        $row="";
+        $row=[];
         if($sql->num_rows()> 0)
         {
             foreach($sql->result() as $item){
@@ -1360,7 +1360,7 @@ SUM(CASE WHEN n.new_han_nop > '".$timenow1."' THEN 1 ELSE 0 END) AS tinconhan
         $db_qr = $this->db->query($query);
         if($db_qr->num_rows() > 0)
         {
-            $tg1="";
+            $tg1=[];
             foreach($db_qr->result() as $itemcat)
             {
                 //viec-lam-viec-lam-ban-hang-c10p0.html
@@ -1377,7 +1377,7 @@ SUM(CASE WHEN n.new_han_nop > '".$timenow1."' THEN 1 ELSE 0 END) AS tinconhan
         $db_qr = $this->db->query($query);
         if($db_qr->num_rows() > 0)
         {
-            $tg1="";
+            $tg1=[];
             foreach($db_qr->result() as $itemcat)
             {
                 //viec-lam-viec-lam-ban-hang-c10p0.html

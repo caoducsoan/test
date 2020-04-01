@@ -67,5 +67,9 @@ $route['kichhoattaikhoan&c=(:any)&u=(:any)&t=(:num)']="site/confirmuser/$1/$2/$3
 $route['/']="site/index";
 $route['(:any)-(:num).html(/:num)?']="site/show_cat_sub/$1/$2";
 $route['(:any)-b(:num).html'] = 'site/show_news/$1/$2';	
+// soạn viết routes
+$route['trang-tin-viec-lam']='site/trangtinvl';
+$route['trang-tin-khoa-hoc']='site/homekhoahoc';
+// kết thúc soạn viết routes
 /* End of file routes.php */
 /* Location: ./system/application/config/routes.php */

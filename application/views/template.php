@@ -29,15 +29,24 @@
     <!-- Font Awesome for icon fonts -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- Google Font API for Lato and Montserrat font families -->
+       <link href="css/stylenew.css" rel="stylesheet">
     <link href="css/css.css" rel="stylesheet">
     <!-- CSS for slick slider plugin -->
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/slick-theme.css" rel="stylesheet">  
     <link href="css/select2.min.css" rel="stylesheet"> 
    <link href="css/style.css" rel="stylesheet"> 
+   <link href="css/select.css" rel="stylesheet"> 
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> 
    
-   
-    <script src="js/jquery_002.js"></script>
+       <script src="js/jquery_002.js"></script>
+   <!-- soạn add thêm file css -->
+   <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css" /> -->
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <link rel="stylesheet"  type="text/css" href="css/owlmin.css">
+  <script src="js/owlmin.js" type="text/javascript" charset="utf-8"></script>
+   <!-- kết thúc soạn add thêm file css -->
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.js"></script>
@@ -56,7 +65,7 @@
 	<?php 
 	if(isset($_SESSION['layoutType']) and $_SESSION['layoutType']=='mobile' and ($content=='tao_cv' or $content=='form_thu')){}else{ ?>
 
-			<?php $this->load->view('header'); ?>
+			<?php $this->load->view('headerofs'); ?>
 		
 	<?php } ?>
 	

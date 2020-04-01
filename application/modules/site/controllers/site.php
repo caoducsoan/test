@@ -39,7 +39,7 @@ class site extends Controller
         $data['province']=(isset($_SESSION['province']))?$_SESSION['province']:'1';
 		$data['robots']= 'index,follow';
         $data['cityselect']=$this->site_model->selectprovince('selectpickersearch','selectpickersearch','Địa điểm')	;	
-        $data['content']='content';
+        $data['content']='indexofs';
         $data['classheader']='';		
         $this->load->view('template',$data);
     } 
@@ -357,7 +357,7 @@ class site extends Controller
         $data['classheader']='inner-page';		
         $this->load->view('template',$data);
     }
-    function ListJobByFilter($aliasnn,$aliaspro,$idnn,$idpro)
+    function ListJobByFilter($aliasnn='',$aliaspro='',$idnn='',$idpro='')
     {    
         $page=$start_row=$this->uri->segment(2);
         $cookjobedu = $_COOKIE['jobedu'];
@@ -644,7 +644,7 @@ $data['category']=$this->site_model->GetCounJobByCategory(1,$idnn,$idpro,'');
             redirect(site_url());
         }
     }
-    function hosocongty($keywork)
+    function hosocongty($keywork='')
     {
         //var_dump($k);die();        
         $c=0;$n=0;$type=0;
@@ -1206,5 +1206,19 @@ $data['nganhnghe']=$this->site_model->GetCountCandiByCategory($keywork,$idpro,1)
         $data=$this->site_model->EmailNofity($findkey);
         echo json_encode($data,JSON_UNESCAPED_UNICODE);
     }    
+    // soạn viết function
+        function trangtinvl()
+    {
+     
+      $data['content']='site/trangtinvl';
+      $this->load->view('template',$data);
+    }
+    function homekhoahoc()
+    {
+     
+      $data['content']='site/homekhoahoc';
+      $this->load->view('template',$data);
+    }
+    // kết thúc soạn viết function
 }
 ?>
